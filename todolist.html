@@ -12,13 +12,17 @@
     <body>
         <div class="header">
             <h2>My To Do List</h2>
-            <input type="text" id="myInput" placeholder="Title. . .">
-            <span onclick="" class="addBtn">Add</span>
+            <div class="to-do-form">
+                <input type="text" id="to-do-input" placeholder="Title. . .">
+                <span onclick="createElement()" class="add-button">Add</span>
+            </div>
         </div>
-        <ul>
-            <li class="checked">JavaScript</li>
-            <li>ctf</li>
-            <li>homework</li>
-        </ul>
+        <div class="to-do-contents">
+            <ul>
+                <li class="checked">JavaScript</li>
+                <li>ctf</li>
+                <li>homework</li>
+            </ul>
+        </div>
     </body>
 </html>
