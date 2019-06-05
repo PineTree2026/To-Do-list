@@ -10,9 +10,11 @@ for (let i = 0; i < li.length; i++) {
 
 // Delete 'li' elemtent
 const deleteList = document.getElementsByClassName('delete');
+const tmp = [];
 for (let i = 0; i < deleteList.length; i ++) {
+    tmp[i] = deleteList[i];
     deleteList[i].addEventListener('click', () => {
-        const targetTag = deleteList[i].parentElement;
+        const targetTag = tmp[i].parentElement;
         targetTag.parentElement.removeChild(targetTag);
     }, false);
 }
@@ -43,4 +45,12 @@ function newElement() {
     deleteButton.appendChild(text);
     deleteButton.classList.add('delete');
     li.appendChild(deleteButton);
+
+    for (let i = 0; i < deleteList.length; i ++) {
+        tmp[i] = deleteList[i];
+        deleteList[i].addEventListener('click', () => {
+            const targetTag = tmp[i].parentElement;
+            targetTag.parentElement.removeChild(targetTag);
+        }, false);
+    }
 }
