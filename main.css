@@ -86,3 +86,11 @@ ul li.checked::before {
     height: 15px;
     width: 7px;
 }
+
+.delete {
+    float: right;
+}
+
+.delete:hover {
+    color: #fa4444;
+}
